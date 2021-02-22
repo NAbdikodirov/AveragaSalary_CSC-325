@@ -1,0 +1,35 @@
+public class Employee implements Measurable {
+        private String name;
+        private double salary;
+        private String jobTitle;
+      
+        public Employee(String name, double salary, String jobTitle) {
+                this.name = name;
+                this.salary = salary;
+                this.jobTitle = jobTitle;
+        }
+        
+        public String getName() {
+                return name;
+        }
+        //return the salary
+				
+        public double getSalary() {
+                return salary;
+        }
+        
+        public String getJobTitle() {
+                return jobTitle;
+        }
+        @Override
+        public double getMeasure() {
+                // employees are measured by their salary.
+                return salary;
+        }
+				
+      	// return the employee info
+        @Override
+        public String toString() {
+                return "Name=" + name + ", salary=" + salary + ", jobTitle=" + jobTitle;
+        }
+}
